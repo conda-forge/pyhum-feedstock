@@ -5,7 +5,7 @@ Home: https://github.com/dbuscombe-usgs/PyHum
 
 Package license: GNU Library or Lesser General Public License (LGPL)
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Python/Cython scripts to read Humminbird DAT
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pyhum-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pyhum-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pyhum-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pyhum-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pyhum-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pyhum-feedstock/branch/master)
