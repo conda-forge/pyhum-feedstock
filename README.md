@@ -3,11 +3,11 @@ About pyhum
 
 Home: https://github.com/dbuscombe-usgs/PyHum
 
-Package license: GNU Library or Lesser General Public License (LGPL)
+Package license: LGPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Python/Cython scripts to read Humminbird DAT
+Summary: Python/Cython scripts to read Humminbird DAT.
 
 
 
