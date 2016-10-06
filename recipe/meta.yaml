@@ -1,53 +1,53 @@
 {% set version = "1.3.14" %}
 
 package:
-    name: pyhum
-    version: {{ version }}
+  name: pyhum
+  version: {{ version }}
 
 source:
-    fn: PyHum-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/P/PyHum/PyHum-{{ version }}.tar.gz
-    sha256: 18ed5ebfbd08d59e75c7125e8670fad3400762c2a2cd65621bafdf5a32c06991
+  fn: PyHum-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/P/PyHum/PyHum-{{ version }}.tar.gz
+  sha256: 18ed5ebfbd08d59e75c7125e8670fad3400762c2a2cd65621bafdf5a32c06991
 
 build:
-    number: 0
-    skip: True  # [py3k]
-    script: python setup.py install
+  number: 0
+  skip: True  # [py3k]
+  script: python setup.py install
 
 requirements:
-    build:
-        - python
-        - cython
-        - numpy x.x
-    run:
-        - python
-        - numpy x.x
-        - scipy  # 0.16.0
-        - pillow
-        - matplotlib
-        - pyproj
-        - scikit-image
-        - simplekml
-        - joblib  0.7.1
-        - basemap
-        - scikit-learn
-        - pyresample
-        - dask
-        - toolz
-        - pandas
+  build:
+    - python
+    - cython
+    - numpy x.x
+  run:
+    - python
+    - numpy x.x
+    - scipy
+    - pillow
+    - matplotlib
+    - pyproj
+    - scikit-image
+    - simplekml
+    - joblib
+    - basemap
+    - scikit-learn
+    - pyresample
+    - dask
+    - toolz
+    - pandas
 
 test:
-    imports:
-        - PyHum
-    commands:
-        - conda inspect linkages -n _test pyhum  # [linux]
+  imports:
+    - PyHum
+  #commands:
+    #- conda inspect linkages -p $PREFIX pyhum  # [not win]
 
 about:
-    home: https://github.com/dbuscombe-usgs/PyHum
-    license: LGPL-3.0
-    summary: 'Python/Cython scripts to read Humminbird DAT.'
+  home: https://github.com/dbuscombe-usgs/PyHum
+  license: LGPL-3.0
+  summary: 'Python/Cython scripts to read Humminbird DAT.'
 
 extra:
-    recipe-maintainers:
-        - dbuscombe-usgs
-        - ocefpaf
+  recipe-maintainers:
+    - dbuscombe-usgs
+    - ocefpaf
