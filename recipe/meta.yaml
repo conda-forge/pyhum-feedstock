@@ -1,4 +1,4 @@
-{% set version = "1.3.14" %}
+{% set version = "1.3.15" %}
 
 package:
   name: pyhum
@@ -7,7 +7,7 @@ package:
 source:
   fn: PyHum-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/P/PyHum/PyHum-{{ version }}.tar.gz
-  sha256: 18ed5ebfbd08d59e75c7125e8670fad3400762c2a2cd65621bafdf5a32c06991
+  sha256: adf31f5fe066c6e7672e28df466c9bf3765b7bebf6609d892d89c32012550e1a
 
 build:
   number: 0
@@ -41,6 +41,7 @@ test:
     - PyHum
   #commands:
     #- conda inspect linkages -p $PREFIX pyhum  # [not win]
+    #- conda inspect objects -p $PREFIX pyhum  # [osx]
 
 about:
   home: https://github.com/dbuscombe-usgs/PyHum
