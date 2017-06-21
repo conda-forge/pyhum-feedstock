@@ -39,9 +39,9 @@ requirements:
 test:
   imports:
     - PyHum
-  #commands:
-    #- conda inspect linkages -p $PREFIX pyhum  # [not win]
-    #- conda inspect objects -p $PREFIX pyhum  # [osx]
+  commands:
+    - conda inspect linkages -p $PREFIX pyhum  # [not win]
+    - conda inspect objects -p $PREFIX pyhum  # [osx]
 
 about:
   home: https://github.com/dbuscombe-usgs/PyHum
