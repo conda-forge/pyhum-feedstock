@@ -1,13 +1,12 @@
-{% set version = "1.3.19" %}
+{% set version = "1.4.1" %}
 
 package:
   name: pyhum
   version: {{ version }}
 
 source:
-  fn: PyHum-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/P/PyHum/PyHum-{{ version }}.tar.gz
-  sha256: 2b884dab5d200175f7eb2011e7fe395aa23e2b3dceef704601a45af112b831d5
+  sha256: 4e1a44ab47b7d00c9a672ad442749caf89f1c89a515495e8dc5cc9d4d4a4aea7
 
 build:
   number: 0
@@ -18,10 +17,10 @@ requirements:
   build:
     - python
     - cython
-    - numpy x.x
+    - numpy 1.11.*
   run:
     - python
-    - numpy x.x
+    - numpy >=1.11
     - scipy
     - pillow
     - matplotlib
