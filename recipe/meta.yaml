@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.4.6" %}
 
 package:
   name: pyhum
@@ -6,16 +6,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/P/PyHum/PyHum-{{ version }}.tar.gz
-  sha256: 4e1a44ab47b7d00c9a672ad442749caf89f1c89a515495e8dc5cc9d4d4a4aea7
+  sha256: 58032ba3383334f40142750a4ea472d5b450476d989df9d614e63964b49a4b68
 
 build:
   number: 0
   skip: True  # [py3k]
-  script: python setup.py install
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
+    - pip
     - cython
     - numpy 1.11.*
   run:
@@ -39,8 +40,8 @@ test:
   imports:
     - PyHum
   commands:
-    - conda inspect linkages -p $PREFIX pyhum  # [not win]
-    - conda inspect objects -p $PREFIX pyhum  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/dbuscombe-usgs/PyHum
