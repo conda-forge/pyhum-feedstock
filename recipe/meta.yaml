@@ -9,19 +9,22 @@ source:
   sha256: 58032ba3383334f40142750a4ea472d5b450476d989df9d614e63964b49a4b68
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py3k]
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - pip
     - cython
-    - numpy 1.11.*
+    - numpy
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
     - scipy
     - pillow
     - matplotlib
