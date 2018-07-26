@@ -42,9 +42,6 @@ requirements:
 test:
   imports:
     - PyHum
-  commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/dbuscombe-usgs/PyHum
