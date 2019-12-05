@@ -9,7 +9,7 @@ source:
   sha256: 58032ba3383334f40142750a4ea472d5b450476d989df9d614e63964b49a4b68
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [py3k]
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -27,7 +27,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - scipy
     - pillow
-    - matplotlib
+    - matplotlib-base
     - pyproj
     - scikit-image
     - simplekml
