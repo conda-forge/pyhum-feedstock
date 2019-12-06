@@ -7,7 +7,7 @@ Package license: LGPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Python/Cython scripts to read Humminbird DAT.
+Summary: Python/Cython scripts to read Humminbird DAT
 
 
 
