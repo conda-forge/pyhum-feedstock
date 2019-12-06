@@ -11,7 +11,7 @@ source:
 build:
   number: 1002
   skip: True  # [py3k]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -46,8 +46,8 @@ test:
 about:
   home: https://github.com/dbuscombe-usgs/PyHum
   license: LGPL-3.0
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: 'Python/Cython scripts to read Humminbird DAT.'
+  license_file: LICENSE.txt
+  summary: 'Python/Cython scripts to read Humminbird DAT'
 
 extra:
   recipe-maintainers:
